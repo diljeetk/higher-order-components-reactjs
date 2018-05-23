@@ -1,62 +1,56 @@
 // App.js
 
-import React, { Component } from 'react';
-import StockList from './stockList';
-import UserList from './UserList';
-import Hoc from './HOC';
+import React, { Component } from "react";
+import StockList from "./stockList";
+import UserList from "./UserList";
+import Hoc from "./HOC";
 
 const StocksData = [
   {
     id: 1,
-    name: 'TCS'
-
+    name: "TCS"
   },
   {
     id: 2,
-    name: 'Infosys'
+    name: "Infosys"
   },
   {
     id: 3,
-    name: 'Reliance'
+    name: "Reliance"
+  },
+  {
+    id: 4,
+    name: "Wipro"
   }
 ];
 const UsersData = [
   {
     id: 1,
-    name: 'Diljeet'
-
+    name: "Diljeet"
   },
   {
     id: 2,
-    name: 'Aman'
+    name: "Aman"
   },
   {
     id: 3,
-    name: 'Rishabh'
+    name: "Rishabh"
   }
 ];
 
-const Stocks = Hoc(
-  StockList,
-  StocksData
-);
+const Stocks = Hoc(StockList, StocksData);
 
-const Users = Hoc(
-  UserList,
-  UsersData
-);
-
+const Users = Hoc(UserList, UsersData);
 
 class App extends Component {
-
   render() {
     return (
       <div>
-        <Stocks/>
-        <br/>
-        <Users></Users>
+        <Stocks />
+        <br />
+        <Users />
       </div>
-    )
+    );
   }
 }
 
